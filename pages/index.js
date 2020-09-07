@@ -6,7 +6,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Computación Visual</title>
-        <link rel="icon" href="/favicon.ico" />
+        <Link href={`${process.env.BACKEND_URL}${href}`}>{href}</Link>
       </Head>
 
       <main className={styles.main}>
