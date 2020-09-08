@@ -1,6 +1,4 @@
 module.exports = {
-    assetPrefix: '/blog-computacion-visual/',
-    env: {
-        BACKEND_URL: '/blog-computacion-visual',
-    },
+    basePath: '/blog-computacion-visual',
+    assetPrefix: '/blog-computacion-visual/'
 }
