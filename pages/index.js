@@ -5,7 +5,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <h1> Maravilla Visual </h1>
+      <h1> Test Github Pages </h1>
     </div>
   )
 }
