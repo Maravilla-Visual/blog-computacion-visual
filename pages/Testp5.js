@@ -1,20 +1,52 @@
-import Sketch from "react-p5";
+import React from 'react'
+import p5 from "p5"
 
-const TestP5 = (props) => {
-    let x = 50;
-    const y = 50;
-  
-    const setup = (p5, canvasParentRef) => {
-        p5.createCanvas(500, 500).parent(canvasParentRef);
-    };
-  
-    const draw = (p5) => {
-        p5.background(0);
-        p5.ellipse(x, y, 70, 70);
-        x++;
-    };
-  
-    return <Sketch setup={setup} draw={draw} />;
+class MySketch extends React.Component {
+  constructor(props) {
+    super(props)
+    this.myRef = React.createRef()
   }
 
-export default TestP5;
+  Sketch = p => {
+    let b
+    let d
+
+    p.setup = function () {
+      p.createCanvas(100, 100)
+      p.background(0)
+      b = new Box(p, 0, 0, 20, 20)
+      d = new Box(p, 20, 20, 20, 20)
+    }
+    p.draw = function () {
+      p.background(0)
+      b.display()
+      d.display()
+    }
+  }
+
+  componentDidMount() {
+    this.myP5 = new p5(this.Sketch, this.myRef.current)
+  }
+
+  render() {
+    return <div ref={this.myRef} />
+  }
+}
+
+class Box {
+  constructor(_p, _x, _y, _w, _h) {
+    // this p is our p5 instance object
+    this.p = _p
+    this.x = _x
+    this.y = _y
+    this.w = _w
+    this.h = _h
+  }
+
+  display() {
+    this.p.fill(255)
+    this.p.rect(this.x, this.y, this.w, this.h)
+  }
+}
+
+export default MySketch;
