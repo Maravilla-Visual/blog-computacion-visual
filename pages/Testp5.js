@@ -1,10 +1,4 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
-
-const p5 = dynamic(
-  () => import("p5"),
-  { ssr: false }
-)
 
 class MySketch extends React.Component {
   constructor(props) {
@@ -30,6 +24,7 @@ class MySketch extends React.Component {
   }
 
   componentDidMount() {
+    const p5 = require("p5") 
     this.myP5 = new p5(this.Sketch, this.myRef.current)
   }
 
