@@ -1,5 +1,10 @@
 import React from 'react'
-import p5 from "p5"
+import dynamic from 'next/dynamic'
+
+const p5 = dynamic(
+  () => import("p5"),
+  { ssr: false }
+)
 
 class MySketch extends React.Component {
   constructor(props) {
