@@ -1,22 +1,93 @@
+import { useState } from "react";
+import { Row, Col } from "react-bootstrap";
+
 const items = [
-  { name: "Procesamiento de Imágen", link: "/" },
-  { name: "Sobre nosotros", link: "/" },
+  {
+    name: "Análisis de imagen",
+    items: [{ name: "Promedio rgb", link: "/blog-computacion-visual/projects/promedio_rgb" }],
+  },
+  { name: "Sobre nosotros", link: "/blog-computacion-visual/projects/sobre_nosotros" },
 ];
+
+const ItemComponents = () => {
+  const [selectedIndexes, setSelectedIndexes] = useState([]);
+
+  const onTitleClick = (index) => {
+    const newSelectedIndexes = [...selectedIndexes];
+
+    if (selectedIndexes.includes(index)) {
+      const keyIndex = selectedIndexes.indexOf(index);
+      newSelectedIndexes.splice(keyIndex, 1);
+      setSelectedIndexes(newSelectedIndexes);
+    } else {
+      newSelectedIndexes.push(index);
+      setSelectedIndexes(newSelectedIndexes);
+    }
+  };
+
+  return items.map((item, index) => {
+    const isTitle = item.link ? false : true;
+    const isTitleSelected = selectedIndexes.includes(index);
+
+    return (
+      <>
+        <Row>
+          <Col xs={12}>
+            <a
+              {...(!isTitle ? { href: item.link } : {})}
+              {...(isTitle ? { className: "navbar-title" } : {})}
+              style={{ float: "right", marginRight: "1rem" }}
+              onClick={() => {
+                if (isTitle) onTitleClick(index);
+              }}
+            >
+              <p>{item.name}</p>
+            </a>
+          </Col>
+        </Row>
+        {isTitleSelected &&
+          item.items.map((subItem, subIndex) => (
+            <Row>
+              <Col xs={12}>
+                <a
+                  href={subItem.link}
+                  className="navbar-subtitle"
+                  style={{ float: "right", marginRight: "1rem" }}
+                >
+                  <p>{subItem.name}</p>
+                </a>
+              </Col>
+            </Row>
+          ))}
+      </>
+    );
+  });
+};
+
 const Navbar = () => {
   return (
     <div style={{ height: "100%" }}>
       <div className="navbar-container" style={{ height: "100%" }} />
 
-      <div style={{ position: "absolute", height: "100%", width: "100%", top: 0, left: 0, paddingTop: '4rem' }}>
-        <a href="/blog-computacion-visual">
-          <div
-            className="navbar-home"
-            style={{
-              margin: "0 auto",
-              cursor: "pointer",
-              display: "table",
-            }}
-          >
+      <div
+        style={{
+          position: "absolute",
+          height: "100%",
+          width: "100%",
+          top: 0,
+          left: 0,
+          paddingTop: "4rem",
+        }}
+      >
+        <div
+          className="navbar-home"
+          style={{
+            margin: "0 auto",
+            cursor: "pointer",
+            display: "table",
+          }}
+        >
+          <a href="/blog-computacion-visual">
             <svg
               width="4em"
               height="4em"
@@ -24,6 +95,7 @@ const Navbar = () => {
               className="bi bi-house-fill"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
+              className="home-button"
             >
               <path
                 fillRule="evenodd"
@@ -34,9 +106,12 @@ const Navbar = () => {
                 d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"
               />
             </svg>
-          </div>
-        </a>
-        <div></div>
+          </a>
+        </div>
+
+        <div style={{ marginTop: "5rem" }}>
+          <ItemComponents />
+        </div>
       </div>
     </div>
   );

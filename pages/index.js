@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
 
 const TestP5 = dynamic(
-  () => import('./Testp5'),
+  () => import('./MySketch'),
   { ssr: false }
 )
 
