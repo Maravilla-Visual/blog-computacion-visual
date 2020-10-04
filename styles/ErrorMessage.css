@@ -38,7 +38,7 @@ p.error-description {
   font-size: 1.2em;
 }
 
-a.back-home {
+.back-home {
   position: relative;
   display: inline-block;
   padding: 10px 25px;

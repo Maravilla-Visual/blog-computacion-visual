@@ -4,9 +4,29 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.home-button,
 .navbar-home {
   color: white;
 }
-.navbar-home:hover {
 
+.home-button:hover {
+  color: rgb(199, 195, 195);
 }
+
+.navbar-subtitle,
+.navbar-title {
+  cursor: pointer;
+}
+.navbar-subtitle {
+  color: white;
+}
+
+.navbar-subtitle:hover{
+  color: rgb(199, 195, 195);
+}
+
+.navbar-subtitle {
+  font-size: 0.9rem;
+}
+
+
