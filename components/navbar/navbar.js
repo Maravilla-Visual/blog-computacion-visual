@@ -6,7 +6,7 @@ const items = [
     name: "Análisis de imagen",
     items: [{ name: "Promedio rgb", link: "/blog-computacion-visual/projects/promedio_rgb" }],
   },
-  { name: "Sobre nosotros", link: "/blog-computacion-visual/projects/sobre_nosotros" },
+  { name: "Sobre nosotros", link: "/blog-computacion-visual/about" },
 ];
 
 const ItemComponents = () => {
@@ -32,11 +32,10 @@ const ItemComponents = () => {
     return (
       <>
         <Row>
-          <Col xs={12}>
+          <Col xs={12} className="sidebar-item">
             <a
               {...(!isTitle ? { href: item.link } : {})}
-              {...(isTitle ? { className: "navbar-title" } : {})}
-              style={{ float: "right", marginRight: "1rem" }}
+              className= "navbar-title"
               onClick={() => {
                 if (isTitle) onTitleClick(index);
               }}
