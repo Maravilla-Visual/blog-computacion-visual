@@ -22,9 +22,16 @@
 .navbar-subtitle,
 .navbar-title {
   cursor: pointer;
+  justify-content: center;
+  color: #F5F7FA;
 }
 .navbar-subtitle {
   color: white;
+}
+
+.navbar-title:hover{
+  color: #F5F7FA;
+  text-decoration-color:  white !important;
 }
 
 .navbar-subtitle:hover{
@@ -36,3 +43,7 @@
 }
 
 
+.sidebar-item {
+  display: flex;
+  justify-content: center;
+}

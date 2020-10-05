@@ -1,33 +1,86 @@
-export default function FirstPost() {
-    return (
-        <div id="body" className="about">
-        <div className="header">
-            <div>
-                <h1>About</h1>
-                <h2>We Have Free Templates for Everyone</h2>
-                <p>Our website templates are created with inspiration, checked for quality and originality and meticulously sliced and coded. What’s more, they’re absolutely free! You can do a lot with them. You can modify them. You can use them to design websites for clients, so long as you agree with the <a href="https://freewebsitetemplates.com/about/terms/">Terms of Use</a>. You can even remove all our links if you want to.</p>
-            </div>
-        </div>
-        <div className="body">
-            <div>
-                <img src="blog-computacion-visual/earth-satellite.jpg" alt="" />
-                <h2>We Have More Templates for You</h2>
-                <p>Looking for more templates? Just browse through all our <a href="https://freewebsitetemplates.com/">Free Website Templates</a> and find what you’re looking for. But if you don’t find any website template you can use, you can try our <a href="https://freewebsitetemplates.com/freewebdesign/">Free Web Design</a> service and tell us all about it. Maybe you’re looking for something different, something special. And we love the challenge of doing something different and something special.</p>
-            </div>
-        </div>
-        <div className="footer">
-            <div>
-                <img src="/space-shuttle.png" alt="" />
-                <h2>Be Part of Our Community</h2>
-                <p>If you’re experiencing issues and concerns about this website template, join the discussion <a href="https://freewebsitetemplates.com/forums/">on our forum</a> and meet other people in the community who share the same interests with you.</p>
-            </div>
-        </div>
-        <div className="section">
-            <div>
-                <h2>Template Details</h2>
-                <p>Design Version 1. Code version 3. Website Template details, discussion and updates for this <a href="https://freewebsitetemplates.com/discuss/spacescience/"> Space Science Website Template</a>. Website Template design by <a href="https://freewebsitetemplates.com/">Free Website Templates</a>. Please feel free to remove some or all the text and links of this page and replace it with your own About content.</p>
-            </div>
-        </div>
+import { Tabs, Tab } from "react-bootstrap";
+import Materia from "./materia";
+
+const integrantes = [
+  {
+    name: "Andres Chaves",
+    img: "/blog-computacion-visual/andres-chaves.png",
+    email: "adchavesm@unal.edu.co",
+    key: "integrante1",
+    github: 'adchavesm',
+    hobbies: ['Bicicletas', 'Carros'],
+    interests: ['ML', 'Web-developer', 'Cloud Computing'],
+    experience: 'Estudiante Universidad Nacional'
+  },
+  {
+    name: "Juan Pablo Giron",
+    img: "/blog-computacion-visual/juan-pablo.png",
+    email: "jpgironb@unal.edu.co",
+    key: "integrante2",
+    github: 'jpgironb',
+    hobbies: ['Salir', 'Jugar'],
+    interests: ['ML', 'IA' ],
+    experience: 'Estudiante Universidad Nacional'
+  },
+  {
+    name: "Andres Velandia",
+    img: "/blog-computacion-visual/andres-velandia.png",
+    email: "anfvelandiaer@unal.edu.co",
+    key: "integrante3",
+    github: 'anfvelandiaer',
+    hobbies: ['Cine', 'Libros', 'Música'],
+    interests: ['ML', 'Web-developer', 'Arquitectura de software'],
+    experience: 'Estudiante Universidad Nacional'
+  },
+];
+
+export default function About() {
+  return (
+    <div className="about">
+    <div className="title">
+      <h1 className="title-text">Sobre Nosotros</h1>
     </div>
-    )
-  }
+
+    <div className="tabs">
+    <Tabs defaultActiveKey="first" transition={false} id="noanim-tab-example">
+      <Tab eventKey="first" title="Materia">
+        <Materia/>
+      </Tab>
+      {integrantes.map((item) => (
+        <Tab eventKey={item.key} title={item.name}>
+          <div className="about-body row">
+            <div className="col-3 m-2">
+              <img src={item.img} alt="Jane" className="about-perfil-img" />
+              <div className="principal-information">
+              <h4 className="perfil-name">{item.name}</h4>
+              <p className="perfil-email">{item.email}</p>
+              <p className="perfil-github">{item.github}</p>
+              </div>
+            </div>
+            <div className="col-8">
+              <div className="container">
+                <h2 className="personal-information">Información Personal</h2>
+                <b> Experiencia: </b> <p>{item.experience}</p>
+                <b> Intereses: </b> 
+                <ul>
+                {item.interests.map((interest) => (
+                  <li> {interest} </li>
+                ))}
+                </ul>
+
+                <b> Hobbies: </b> 
+                <ul>
+                {item.hobbies.map((hobbie) => (
+                  <li> {hobbie} </li>
+                ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </Tab>
+      ))}
+    </Tabs>
+    </div>
+    </div>
+  );
+}
