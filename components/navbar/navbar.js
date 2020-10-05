@@ -4,7 +4,10 @@ import { Row, Col } from "react-bootstrap";
 const items = [
   {
     name: "Análisis de imagen",
-    items: [{ name: "Promedio rgb", link: "/blog-computacion-visual/projects/promedio_rgb" }],
+    items: [{ name: "Promedio rgb", link: "/blog-computacion-visual/projects/promedio_rgb" },
+            { name: "Luma", link: '/blog-computacion-visual/projects/luma'},
+            { name: "Blur", link: '/blog-computacion-visual/projects/blur'},
+            { name: "Histograma", link: '/blog-computacion-visual/projects/histograma'}],
   },
   { name: "Sobre nosotros", link: "/blog-computacion-visual/projects/sobre_nosotros" },
 ];

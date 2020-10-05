@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const PromedioRGB = ({ imageURL }) => {
+const Luma = ({ imageURL }) => {
   const [myRef] = useState(React.createRef());
 
   const Sketch = (p5) => {
@@ -11,7 +11,7 @@ const PromedioRGB = ({ imageURL }) => {
     };
 
     p5.setup = () => {
-      console.log("ESTOY EN PROMEDIO RGB")
+        console.log("ESTOY EN LUMA")
       p5.createCanvas(200, 200);
       image.loadPixels();
 
@@ -22,7 +22,7 @@ const PromedioRGB = ({ imageURL }) => {
           let green = p5.green(image.get(i,j));
           let blue = p5.blue(image.get(i,j));
 
-          let average = (red + green + blue) / 3;
+          let average = red*0.299 + green*0.587 + blue*0.114;
 
           image.set(i, j, p5.color(average, average, average));
         }
@@ -46,4 +46,4 @@ const PromedioRGB = ({ imageURL }) => {
   return <div ref={myRef} />;
 };
 
-export default PromedioRGB;
+export default Luma;
