@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "../styles/stars_background.css";
 import "../styles/Navbar.css";
 import "../styles/About.css";
+import "../styles/Projects.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/ErrorMessage.css";
 import Navbar from "../components/navbar/navbar";

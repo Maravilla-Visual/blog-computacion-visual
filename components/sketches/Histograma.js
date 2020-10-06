@@ -12,7 +12,7 @@ const Histograma = ({ imageURL }) => {
 
     p5.setup = () => {
         console.log("ESTOY EN Histograma")
-      p5.createCanvas(200, 200);
+      p5.createCanvas(300, 300);
       image.loadPixels();
 
       for (let i = 0; i < image.width; i++) {
@@ -34,7 +34,7 @@ const Histograma = ({ imageURL }) => {
 
     p5.draw = () => {
       
-      p5.image(image, 0, 0, 200, 200);
+      p5.image(image, 0, 0, 300, 300);
     };
   };
 

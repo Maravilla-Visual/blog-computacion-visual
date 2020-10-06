@@ -50,7 +50,7 @@ const ItemComponents = () => {
         {isTitleSelected &&
           item.items.map((subItem, subIndex) => (
             <Row>
-              <Col xs={12}>
+              <Col xs={12} className="sidebar-item__subtitle">
                 <a
                   href={subItem.link}
                   className="navbar-subtitle"
