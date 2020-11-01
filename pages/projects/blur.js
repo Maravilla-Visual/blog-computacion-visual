@@ -1,71 +1,86 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 
-const BlurSketch = dynamic(
-  () => import("../../components/sketches/Blur"),
-  { ssr: false }
-);
+const BlurSketch = dynamic(() => import("../../components/sketches/Blur"), {
+  ssr: false,
+});
 
 const Blur = () => {
   const [file, setFile] = useState(null);
   const [showSketch, setShowSketch] = useState(false);
+  const hiddenFileInput = React.useRef(null);
 
   const handleChange = (event) => {
     setFile(URL.createObjectURL(event.target.files[0]));
     setShowSketch(false);
   };
 
+  const handleClick = (event) => {
+    hiddenFileInput.current.click();
+  };
+
   const handleConvertClick = () => {
     setShowSketch(true);
   };
 
+  const deleteFile = () => {
+    setFile(null);
+  };
+
   return (
-    <div style={{ height: "100%", padding: '5rem' }}>
-      <div className="projects-container" style={{ height: "100%", width: '100%' }} />
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          position: 'absolute',
-          top: 0,
-          left: '6rem',
-        }}
-      >
-        <Row>
-          <Col xs={2}>
+    <div className="main-projects-container">
+      <div className="title">
+        <h1 className="title-text">BLUR</h1>
+      </div>
+      <div className="files-container">
+        {!file && (
+          <div>
+            <Button onClick={handleClick} className="button-box">
+              Imagen
+            </Button>
             <input
               type="file"
               onChange={handleChange}
+              ref={hiddenFileInput}
               placeholder="holi"
-              style={{ marginTop: "1rem" }}
+              className="input-file"
+              style={{ display: "none" }}
             />
-          </Col>
+          </div>
+        )}
+        {file && (
           <Col xs={4}>
-            <img src={file} style={{ width: "200px", height: "200px" }} />
+            <img src={file} style={{ width: "300px", height: "300px" }} />
           </Col>
+        )}
+        {file && (
           <Col xs={2}>
-            {file && (
-              <button
-                className="back-home"
-                style={{ outline: "none", border: "none" }}
-                onClick={handleConvertClick}
-              >
-                Convertir
-              </button>
-            )}
+            <button
+              className="back-home"
+              style={{ outline: "none", border: "none" }}
+              onClick={handleConvertClick}
+            >
+              Convertir
+            </button>
           </Col>
+        )}
+        {file && (
           <Col xs={4}>
-            {file && showSketch && (
+            {showSketch && (
               <div>
-                <BlurSketch imageURL={file} kernelSize={3}/>
+                <BlurSketch imageURL={file} kernelSize={3} />
               </div>
             )}
           </Col>
-        </Row>
+        )}
+        {file && (
+          <div className="button-box__delete">
+            <Button onClick={deleteFile} className="button-box">
+              Borrar Imagen
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

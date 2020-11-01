@@ -4,11 +4,6 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.projects-container {
-  background-color: #F5F3F5;
-  opacity: 0.8;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 .home-button,
 .navbar-home {
@@ -18,15 +13,16 @@
 .home-button:hover {
   color: rgb(199, 195, 195);
 }
-
-.navbar-subtitle,
 .navbar-title {
   cursor: pointer;
   justify-content: center;
   color: #F5F7FA;
+  font-weight: 700;
+  font-size: 17px;
 }
 .navbar-subtitle {
-  color: white;
+  color: #F5F7FA;
+  cursor: pointer;
 }
 
 .navbar-title:hover{
@@ -46,4 +42,12 @@
 .sidebar-item {
   display: flex;
   justify-content: center;
+  margin: 8px 0px;
+
+}
+
+.sidebar-item__subtitle {
+  display: flex;
+  justify-content: center;
+  margin: 1px 0px;
 }

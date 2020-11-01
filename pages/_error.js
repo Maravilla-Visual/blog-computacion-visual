@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 const Error = () => {
   
   return (
-    <div id="container">
+    <div className="error-container">
       <div className="content">
         <h2 className="error-message">404</h2>
         <h4 className="error-title">
