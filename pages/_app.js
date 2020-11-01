@@ -13,10 +13,13 @@ function MyApp({ Component, pageProps }) {
     <div className="main-container">
       <div style={{ width: "100%", height: "100%", position: "absolute" }}>
         <Container fluid style={{ height: "100%" }}>
-          <Row style={{ height: "100%"}}>
-
-            <Col xs={3} lg={2} style={{ paddingLeft: 0, paddingRight: 0 }} className="navbar">
-
+          <Row style={{ height: "100%" }}>
+            <Col
+              xs={3}
+              lg={2}
+              style={{ paddingLeft: 0, paddingRight: 0 }}
+              className="navbar"
+            >
               <Navbar />
             </Col>
 

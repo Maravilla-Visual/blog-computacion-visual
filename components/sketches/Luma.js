@@ -11,7 +11,6 @@ const Luma = ({ imageURL }) => {
     };
 
     p5.setup = () => {
-        console.log("ESTOY EN LUMA")
       p5.createCanvas(300, 300);
       image.loadPixels();
 

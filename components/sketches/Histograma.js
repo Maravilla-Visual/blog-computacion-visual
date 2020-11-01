@@ -11,7 +11,6 @@ const Histograma = ({ imageURL }) => {
     };
 
     p5.setup = () => {
-        console.log("ESTOY EN Histograma")
       p5.createCanvas(300, 300);
       image.loadPixels();
 

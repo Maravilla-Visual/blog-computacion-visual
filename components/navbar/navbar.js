@@ -9,6 +9,7 @@ const items = [
             { name: "Blur", link: '/blog-computacion-visual/projects/blur'},
             { name: "Histograma", link: '/blog-computacion-visual/projects/histograma'}],
   },
+  { name: "Ilusiones visuales", link: "/blog-computacion-visual/projects/ilusiones" },
   { name: "Sobre nosotros", link: "/blog-computacion-visual/about" },
 ];
 
