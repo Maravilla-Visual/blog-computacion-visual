@@ -4,12 +4,29 @@ import { Row, Col } from "react-bootstrap";
 const items = [
   {
     name: "Análisis de imagen",
-    items: [{ name: "Promedio rgb", link: "/blog-computacion-visual/projects/promedio_rgb" },
-            { name: "Luma", link: '/blog-computacion-visual/projects/luma'},
-            { name: "Blur", link: '/blog-computacion-visual/projects/blur'},
-            { name: "Histograma", link: '/blog-computacion-visual/projects/histograma'}],
+    items: [
+      {
+        name: "Promedio rgb",
+        link: "/blog-computacion-visual/projects/promedio_rgb",
+      },
+      { name: "Luma", link: "/blog-computacion-visual/projects/luma" },
+      { name: "Blur", link: "/blog-computacion-visual/projects/blur" },
+      {
+        name: "Histograma",
+        link: "/blog-computacion-visual/projects/histograma",
+      },
+    ],
   },
-  { name: "Ilusiones visuales", link: "/blog-computacion-visual/projects/ilusiones" },
+  {
+    name: "Ilusiones visuales",
+    items: [
+      {
+        name: "Taller",
+        link: "/blog-computacion-visual/projects/ilusiones/ilusiones",
+      },
+      { name: "Reporte", link: "/blog-computacion-visual/projects/ilusiones/reporte" },
+    ],
+  },
   { name: "Sobre nosotros", link: "/blog-computacion-visual/about" },
 ];
 
@@ -39,7 +56,7 @@ const ItemComponents = () => {
           <Col xs={12} className="sidebar-item">
             <a
               {...(!isTitle ? { href: item.link } : {})}
-              className= "navbar-title"
+              className="navbar-title"
               onClick={() => {
                 if (isTitle) onTitleClick(index);
               }}
