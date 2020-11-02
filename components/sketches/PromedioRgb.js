@@ -10,6 +10,7 @@ export default function PromedioRGB(p5) {
 
   p5.setup = () => {
     p5.createCanvas(300, 300);
+    p5.background(255);
     image.loadPixels();
     filteredImage=p5.createImage(image.width,image.height);
     filteredImage.loadPixels();
@@ -48,4 +49,3 @@ export default function PromedioRGB(p5) {
   };*/
 }
 
-//XDDDDDD
