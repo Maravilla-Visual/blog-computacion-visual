@@ -11,7 +11,7 @@ const Blur = ({ imageURL, kernelSize }) => {
     };
 
     p5.setup = () => {
-      console.log("ESTOY EN BLUR");
+      
       const size = kernelSize;
       const sigma = 15.0;
       const mid = parseInt(size / 2);

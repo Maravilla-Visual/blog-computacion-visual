@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { Row, Col, Button } from "react-bootstrap";
-
-const PromedioRGBSketch = dynamic(
-  () => import("../../components/sketches/PromedioRgb"),
-  { ssr: false }
-);
+import {loadableP5 as P5Wrapper} from '../../components/sketches/loadable';
+import PromedioRGBSketch from '../../components/sketches/PromedioRgb';
 
 const PromedioRGB = () => {
   const [file, setFile] = useState(null);
@@ -70,7 +67,7 @@ const PromedioRGB = () => {
           <Col xs={4}>
             {showSketch && (
               <div>
-                <PromedioRGBSketch imageURL={file} />
+                 <P5Wrapper sketch={PromedioRGBSketch} imageURL={file} />
               </div>
             )}
           </Col>
