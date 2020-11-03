@@ -11,13 +11,13 @@ const VisualDefault = () => {
       <div className="title">
         <h1 className="title-text">Blivet</h1>
       </div>
-          <div className="ilusion-wrap">
-            <div className="ilusion-canvas">
+          <div className="ilusion-wrap ilusion-wrap-column">
+            <div className="ilusion-canvas ilusion-canvas-column">
             <P5Wrapper sketch={Blivet} />
             </div>
-            <div className="description-text ilusion-description">
+            <div className="description-text ilusion-description ilusion-description-column">
               <h5>Explicación</h5>
-              <p className="ilusion-explanation">
+              <p className=" ilusion-explanation">
               {" "}
                 Un tridente imposible , también conocido como tenedor imposible
                 , blivet , poiuyt o diapasón del diablo , es un dibujo de un
@@ -32,6 +32,9 @@ const VisualDefault = () => {
                   Mas Información{" "}
                 </a>
               </p>
+              <small>
+                  * Revisa con atención el comportamiento de la esfera y trata de identificar que figura es.
+                </small>
             </div>
           </div>
     </div>

@@ -7,7 +7,7 @@ export default function RedBall(p5) {
   let a = false;
 
   p5.setup = function () {
-    p5.createCanvas(900, 500);
+    p5.createCanvas(900, 400);
   };
 
   p5.draw = function () {

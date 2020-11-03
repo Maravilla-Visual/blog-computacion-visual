@@ -17,7 +17,8 @@ export default function CrazyCircles(p5) {
   p5.draw = function () {
     p5.background(0);
     p5.textAlign(p5.CENTER);
-    p5.text("Number of balls: " + n, 500 / 2, 60);
+    p5.fill(255)
+    p5.text("Number of balls: " + n, 150, 60);
     p5.push();
     p5.translate(500 / 2, 500 / 2);
     if (linesVisible) {

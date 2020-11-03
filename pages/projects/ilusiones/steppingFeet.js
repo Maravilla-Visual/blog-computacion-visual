@@ -8,16 +8,20 @@ import SteppingFeetVertical from "../../../components/sketches/ilusiones/Steppin
 
 const VisualDefault = () => {
   return (
-    <div className="main-projects-container">
+    <div className="main-projects-container px-1">
       <div className="title">
         <h1 className="title-text">Stteping Feet</h1>
       </div>
-          <div className="ilusion-wrap">
+          <div className="ilusion-wrap ilusion-wrap-overflow">
             <div className="ilusion-canvas">
+            <div className="ilusion-canvas-item">
                 <P5Wrapper sketch={SteppingFeet} />
+                </div>
+                <div className="ilusion-canvas-item">
                 <P5Wrapper sketch={SteppingFeetVertical} />
             </div>
-            <div className="description-text ilusion-description">
+            </div>
+            <div className="description-text ilusion-description ilusion-description-no-overflow">
               <h5>Explicación</h5>
               <p className="ilusion-explanation">
                 Esta ilusión es un fenómeno de percepción de movimiento que

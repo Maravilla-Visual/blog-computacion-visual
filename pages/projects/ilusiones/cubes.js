@@ -4,11 +4,11 @@ import Cubes3d from "../../../components/sketches/ilusiones/Cubes3d";
 
 const VisualDefault = () => {
   return (
-    <div className="main-projects-container">
+    <div className="main-projects-container px-3">
       <div className="title">
         <h1 className="title-text">3D cubes</h1>
       </div>
-          <div className="ilusion-wrap">
+          <div className="ilusion-wrap mt-4">
             <div className="ilusion-canvas">
             <P5Wrapper sketch={Cubes3d} />
             </div>
@@ -33,9 +33,10 @@ const VisualDefault = () => {
                 </a>
               </p>
               
-              <h5>Controles</h5>
+              <h5>Instrucciones</h5>
               <ul className="ilusion-explanation">
-                <li>Mueva el mouse para rotar la estructura de cubos.</li>
+                <p className="ilusion-explanation mb-1" >¿Cuantos cuadrados o cubos vez?.</p>
+                <p className="ilusion-explanation mb-1 ml-2" >Mueve el mouse sobre la imagen y vuelve a responder la misma pregunta.</p>
               </ul>
             </div>
           </div>
