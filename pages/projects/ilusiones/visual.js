@@ -4,7 +4,6 @@ import { Tabs, Tab } from "react-bootstrap";
 import { loadableP5 as P5Wrapper } from "../../../components/sketches/loadable";
 import SteppingFeet from "../../../components/sketches/ilusiones/SteppingFeet";
 import SteppingFeetVertical from "../../../components/sketches/ilusiones/SteppingFeetVertical";
-import Cubes3d from "../../../components/sketches/ilusiones/Cubes3d";
 import Blivet from "../../../components/sketches/ilusiones/Blivet";
 import CrazyCircles from "../../../components/sketches/ilusiones/CrazyCircles";
 import ColourContrast from "../../../components/sketches/ilusiones/ColourContrast";
@@ -56,21 +55,11 @@ const VisualDefault = () => {
                   Mas Información{" "}
                 </a>
               </p>
-              <h5>Controles</h5>
-              <ul>
-                <li>
+              <small>
                   Haga click para hacer aparecer y desaparecer el gradiente del
                   fondo.
-                </li>
-              </ul>
+                </small>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
           </div>
         </Tab>
         <Tab eventKey="grid" title="Hermann Grid" className="m-2">
@@ -93,13 +82,6 @@ const VisualDefault = () => {
                 </a>
               </p>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
           </div>
         </Tab>
         <Tab eventKey="balls" title="Ebbinghaus" className="m-2">
@@ -122,17 +104,10 @@ const VisualDefault = () => {
                 </a>
               </p>
               <h5>Controles</h5>
-              <ul>
-                <li>Haga click para cambiar el estado del sketch.</li>
-              </ul>
+              <small>
+            Haga click para cambiar el estado del sketch.
+                </small>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
           </div>
         </Tab>
         <Tab eventKey="triangle" title="Kanizsa Triangle" className="m-2">
@@ -155,13 +130,6 @@ const VisualDefault = () => {
                 </a>
               </p>
             </div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
           </div>
         </Tab>
         <Tab eventKey="crazy-circles" title="Crazy circles" className="m-2">
