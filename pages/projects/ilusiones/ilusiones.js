@@ -20,7 +20,7 @@ const ilusions = [
   },
   {
     name: "Ebbinghaus",
-    category: "Distorcion",
+    category: "Distorsion",
     reference: "https://www.illusionsindex.org/ir/ebbinghaus-illusion",
     type: "Click",
     url: "no aplica",
@@ -36,7 +36,7 @@ const ilusions = [
   },
   {
     name: "Crazy Circles",
-    category: "Paradojica",
+    category: "Paradójica",
     reference: "http://www.consciousness.it/CC/CCD/CrazyCirclesDebunked.php",
     type: "integrante1",
     url: "no aplica",
@@ -52,7 +52,7 @@ const ilusions = [
   },
   {
     name: "Bilvet",
-    category: "Paradojica / Geometrica",
+    category: "Paradójica / Geométrica",
     reference: "https://www.youtube.com/watch?v=U4ziyKPYC1k&t=58s&ab_channel=sTeR-POl",
     type: "Movimiento automatico.",
     url: "no aplica",
@@ -60,7 +60,7 @@ const ilusions = [
   },
   {
     name: "Stepping feet",
-    category: "Paradojica",
+    category: "Paradójica",
     reference: "https://michaelbach.de/ot/col-context/index.html",
     type: "- Lista desplegable para configurar velocidad de buses. -Teclas para hacer aparecer y desaparecer buses. -Tecla para hacer aparecer y desaparecer barras de fondo.",
     url: "no aplica",
@@ -68,7 +68,7 @@ const ilusions = [
   },
   {
     name: "Colour Constrant",
-    category: "Paradojica",
+    category: "Paradójica",
     reference: "https://michaelbach.de/ot/col-context/index.html",
     type: "Slider with Click",
     url: "no aplica",

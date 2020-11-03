@@ -21,7 +21,7 @@ const ilusions = [
   },
   {
     name: "Ebbinghaus",
-    category: "Distorcion",
+    category: "Distorsion",
     reference: "https://www.illusionsindex.org/ir/ebbinghaus-illusion",
     type: "Click",
     url: "no aplica",

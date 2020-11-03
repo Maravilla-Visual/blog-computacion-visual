@@ -10,10 +10,10 @@ const VisualDefault = () => {
   return (
     <div className="main-projects-container px-1">
       <div className="title">
-        <h1 className="title-text">Stteping Feet</h1>
+        <h1 className="title-text">Stepping Feet</h1>
       </div>
-          <div className="ilusion-wrap ilusion-wrap-overflow">
-            <div className="ilusion-canvas">
+          <div className="ilusion-wrap ilusion-wrap-overflow ilusion-wrap-column">
+            <div className="ilusion-canvas ilusion-canvas-doble">
             <div className="ilusion-canvas-item">
                 <P5Wrapper sketch={SteppingFeet} />
                 </div>
@@ -21,7 +21,7 @@ const VisualDefault = () => {
                 <P5Wrapper sketch={SteppingFeetVertical} />
             </div>
             </div>
-            <div className="description-text ilusion-description ilusion-description-no-overflow">
+            <div className="description-text ilusion-description ilusion-description-no-overflow ilusion-description ilusion-description-column">
               <h5>Explicación</h5>
               <p className="ilusion-explanation">
                 Esta ilusión es un fenómeno de percepción de movimiento que
