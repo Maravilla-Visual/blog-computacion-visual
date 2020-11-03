@@ -2,9 +2,6 @@ import React from "react";
 import { loadableP5 as P5Wrapper } from "../../../components/sketches/loadable";
 import Cubes3d from "../../../components/sketches/ilusiones/Cubes3d";
 
-
-
-
 const VisualDefault = () => {
   return (
     <div className="main-projects-container">
