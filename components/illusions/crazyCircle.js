@@ -24,8 +24,7 @@ const CrazyCircle = () => {
 
         p5.draw = () => {
             p5.background(0, 0, 0);
-            // p5.textAlign(CENTER);
-            p5.text("Number of balls: " + n, 500 / 2, 60);
+            p5.text('Number of balls: ' + N, 10, 60);
             p5.push();
             p5.translate(500 / 2, 500 / 2);
             if (linesVisible) {
