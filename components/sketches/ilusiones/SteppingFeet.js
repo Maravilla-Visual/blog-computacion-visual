@@ -10,7 +10,7 @@ export default function SteppingFeet(p5) {
     p5.createCanvas(645, 300);
     p5.background(255);
     sel = p5.createSelect();
-    sel.position(800, 600);
+    sel.position(740, 0);
     sel.option(0.5);
     sel.option(1);
     sel.option(1.5);
