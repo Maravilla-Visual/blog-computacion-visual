@@ -22,7 +22,7 @@ const items = [
     items: [
       {
         name: "Taller",
-        link: "/blog-computacion-visual/projects/ilusiones/ilusiones",
+        link: "/blog-computacion-visual/projects/ilusiones/visual",
       },
       { name: "Reporte", link: "/blog-computacion-visual/projects/ilusiones/reporte" },
     ],
