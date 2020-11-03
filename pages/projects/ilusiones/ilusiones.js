@@ -3,6 +3,10 @@ import { Row, Col, Button } from "react-bootstrap";
 import { loadableP5 as P5Wrapper } from "../../../components/sketches/loadable";
 import SteppingFeet from "../../../components/sketches/ilusiones/SteppingFeet";
 import SteppingFeetVertical from "../../../components/sketches/ilusiones/SteppingFeetVertical";
+import Cubes3d from "../../../components/sketches/ilusiones/Cubes3d";
+import Blivet from "../../../components/sketches/ilusiones/Blivet";
+import CrazyCircles from "../../../components/sketches/ilusiones/CrazyCircles";
+import ColourContrast from "../../../components/sketches/ilusiones/ColourContrast";
 
 const Ilusiones = () => {
   return (
@@ -11,7 +15,7 @@ const Ilusiones = () => {
         <h1 className="title-text">Demostraciones de ilusiones visuales</h1>
       </div>
       <div className="files-container2" style={{ textAlign: "justify" }}>
-        <h2>Stepping feet</h2>
+        <h1>Stepping feet</h1>
         <p>De acuerdo con Wikipedia:</p>
         <p style={{ marginLeft: "15px" }}>
           Esta ilusión es un fenómeno de percepción de movimiento que involucra
@@ -55,15 +59,31 @@ const Ilusiones = () => {
           </h3>
           <h4>Vel.</h4>
         </div>
-        <div>
+        <div style={{position: 'relative'}}>
           <P5Wrapper sketch={SteppingFeet} />
         </div>
         <div className="info-block">
           <h3 style={{ marginTop: "16px", marginRight: "635px" }}>Vertical</h3>
           <h4>Vel.</h4>
         </div>
-        <div>
+        <div style={{position: 'relative'}}>
           <P5Wrapper sketch={SteppingFeetVertical} />
+        </div>
+        <h1 style={{ marginTop: "36px" }}>Cubos 3D</h1>
+        <div style={{position: 'relative'}}>
+          <P5Wrapper sketch={Cubes3d} />
+        </div>
+        <h1 style={{ marginTop: "36px" }}>Blivet</h1>
+        <div style={{position: 'relative'}}>
+          <P5Wrapper sketch={Blivet} />
+        </div>
+        <h1 style={{ marginTop: "36px" }}>Crazy circles</h1>
+        <div style={{position: 'relative'}}>
+          <P5Wrapper sketch={CrazyCircles} />
+        </div>
+        <h1 style={{ marginTop: "36px" }}>Colour contrast</h1>
+        <div style={{position: 'relative'}}>
+          <P5Wrapper sketch={ColourContrast} />
         </div>
         <br></br>
         <br></br>
