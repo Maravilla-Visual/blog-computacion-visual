@@ -111,7 +111,7 @@ const Ilusiones = () => {
               <th>URL</th>
             </tr>
           </thead>
-          <tbody class="container-overflow">
+          <tbody className="container-overflow">
             {ilusions.map((item, index) => (
               <tr>
                 <td>
