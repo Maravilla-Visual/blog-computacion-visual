@@ -1,12 +1,4 @@
-import React, {
-    useState,
-    useEffect
-} from "react";
-
-const Gradient = () => {
-    const [myRef] = useState(React.createRef());
-
-    const Sketch = (p5) => {
+export default function Gradient (p5) {
         let linesVisible = false;
 
         p5.setup = () => {
@@ -36,17 +28,4 @@ const Gradient = () => {
           p5.mousePressed = () => {
             linesVisible = !linesVisible;
           }
-    };
-
-    useEffect(() => {
-        const p5 = require("p5");
-        const myP5 = new p5(Sketch, myRef.current);
-    }, []);
-
-    return <div ref = {
-        myRef
-    }
-    />;
 };
-
-export default Gradient;
