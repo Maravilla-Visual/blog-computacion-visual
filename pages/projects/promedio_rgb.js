@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { Row, Col, Button } from "react-bootstrap";
-import {loadableP5 as P5Wrapper} from '../../components/sketches/loadable';
+import {loadableP5 as P5Wrapper} from '../../components/wrapper/loadable';
 import PromedioRGBSketch from '../../components/sketches/PromedioRgb';
 
 const PromedioRGB = () => {

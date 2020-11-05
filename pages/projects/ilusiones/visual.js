@@ -30,53 +30,7 @@ const VisualDefault = () => {
         <h1 className="title-text">Ilusiones</h1>
       </div>
       <Tabs defaultActiveKey="gradient" id="uncontrolled-tab-example">
-        <Tab eventKey="gradient" title="Gradient Color" className="m-2">
-          <div style={{ height: "100vh", overflow: "auto" }} className="my-2">
-            <Gradient />
-            <div className="description-text description-text-visual">
-              <p>
-                {" "}
-                El efecto es el resultado de la percepción de la luminosidad, o
-                el concepto de que nuestros ojos perciben los colores de manera
-                diferente en función de la sombra de cualquier objeto que esté
-                en el fondo o en primer plano.{" "}
-                <a
-                  href="https://www.dailymail.co.uk/sciencetech/article-6065035/The-incredible-color-changing-gradient-illusion-break-brain.html"
-                  target="_blank"
-                >
-                  {" "}
-                  Mas Información{" "}
-                </a>
-              </p>
-              <small>
-                  * Haga click para hacer aparecer y desaparecer el gradiente del
-                  fondo.
-                </small>
-            </div>
-          </div>
-        </Tab>
-        <Tab eventKey="grid" title="Hermann Grid" className="m-2">
-          <div style={{ height: "100vh", overflow: "auto" }} className="my-2">
-            <Grid />
-            <div className="description-text description-text-visual">
-              <p>
-                {" "}
-                La ilusión es el resultado de que las células de la retina
-                ajustan el brillo de una imagen ajustando la intensidad de la
-                señal de luz en muchas secciones pequeñas, lo que le permite ver
-                una amplia gama de detalles brillantes y oscuros en la misma
-                imagen.{" "}
-                <a
-                  href="https://www.illusionsindex.org/i/hermann-grid"
-                  target="_blank"
-                >
-                  {" "}
-                  Mas Información{" "}
-                </a>
-              </p>
-            </div>
-          </div>
-        </Tab>
+      
         <Tab eventKey="balls" title="Ebbinghaus" className="m-2">
           <div style={{ height: "100vh", overflow: "auto" }} className="my-2">
             <Balls />

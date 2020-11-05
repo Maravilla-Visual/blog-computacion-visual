@@ -1,12 +1,5 @@
-import React, {
-    useState,
-    useEffect
-} from "react";
 
-const Balls = () => {
-    const [myRef] = useState(React.createRef());
-
-    const Sketch = (p5) => {
+export default function Balls (p5) {
         let ballsMode = 0;
 
         p5.setup = () => {
@@ -62,17 +55,4 @@ const Balls = () => {
                 ballsMode = 0
             }
         }
-    };
-
-    useEffect(() => {
-        const p5 = require("p5");
-        const myP5 = new p5(Sketch, myRef.current);
-    }, []);
-
-    return <div ref = {
-        myRef
-    }
-    />;
 };
-
-export default Balls;

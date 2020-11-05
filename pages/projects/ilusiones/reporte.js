@@ -9,7 +9,7 @@ const ilusions = [
       "https://www.researchgate.net/figure/Demonstration-of-the-simultaneous-contrast-an-optical-illusion-already-described-as_fig4_264866231",
     type: "Click",
     url: "no aplica",
-    link: "/blog-computacion-visual/projects/ilusiones/visual",
+    link: "/blog-computacion-visual/projects/ilusiones/gradient",
   },
   {
     name: "Hermann Grid",
@@ -17,7 +17,7 @@ const ilusions = [
     reference: "https://www.illusionsindex.org/i/hermann-grid",
     type: "N/A",
     url: "no aplica",
-    link: "/blog-computacion-visual/projects/ilusiones/visual",
+    link: "/blog-computacion-visual/projects/ilusiones/grid",
   },
   {
     name: "Ebbinghaus",
@@ -25,7 +25,7 @@ const ilusions = [
     reference: "https://www.illusionsindex.org/ir/ebbinghaus-illusion",
     type: "Click",
     url: "no aplica",
-    link: "/blog-computacion-visual/projects/ilusiones/visual",
+    link: "/blog-computacion-visual/projects/ilusiones/ebbinghaus",
   },
   {
     name: "Kaniza Triangle",
@@ -33,7 +33,7 @@ const ilusions = [
     reference: "https://www.illusionsindex.org/i/kanizsa-triangle",
     type: "N/A",
     url: "no aplica",
-    link: "/blog-computacion-visual/projects/ilusiones/visual",
+    link: "/blog-computacion-visual/projects/ilusiones/kanizsa",
   },
   {
     name: "Crazy Circles",

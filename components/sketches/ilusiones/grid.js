@@ -1,12 +1,4 @@
-import React, {
-    useState,
-    useEffect
-} from "react";
-
-const Grid = () => {
-    const [myRef] = useState(React.createRef());
-
-    const Sketch = (p5) => {
+export default function Grid (p5) {
         p5.setup = () => {
             p5.createCanvas(640, 360); 
             p5.background(0); 
@@ -41,17 +33,4 @@ const Grid = () => {
             }
 
         };
-    };
-
-    useEffect(() => {
-        const p5 = require("p5");
-        const myP5 = new p5(Sketch, myRef.current);
-    }, []);
-
-    return <div ref = {
-        myRef
-    }
-    />;
 };
-
-export default Grid;
