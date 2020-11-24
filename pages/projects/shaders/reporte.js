@@ -65,7 +65,7 @@ const Ilusiones = () => {
         </p>
         <div className="d-flex flex-column align-items-center">
           <img
-            src="/blog-computacion-visual/ambient-light.png"
+            src="/blog-computacion-visual/ambient.png"
             alt="Ambient-light"
             className="about-perfil-img"
           />
@@ -118,7 +118,7 @@ const Ilusiones = () => {
         </p>
         <div className="d-flex flex-column align-items-center">
           <img
-            src="/blog-computacion-visual/diffuse-light.png"
+            src="/blog-computacion-visual/diffuse.png"
             alt="diffuse-light"
             className="about-perfil-img"
           />
@@ -169,7 +169,7 @@ const Ilusiones = () => {
         </p>
         <div className="d-flex flex-column align-items-center">
           <img
-            src="/blog-computacion-visual/specular-light.png"
+            src="/blog-computacion-visual/specular.png"
             alt="Specular-light"
             className="about-perfil-img"
           />
