@@ -27,6 +27,12 @@ const items = [
       { name: "Reporte", link: "/blog-computacion-visual/projects/ilusiones/reporte" },
     ],
   },
+  {
+    name: "Light Shaders",
+    items: [
+      { name: "Reporte", link: "/blog-computacion-visual/projects/shaders/reporte" },
+    ],
+  },
   { name: "Sobre nosotros", link: "/blog-computacion-visual/about" },
 ];
 
