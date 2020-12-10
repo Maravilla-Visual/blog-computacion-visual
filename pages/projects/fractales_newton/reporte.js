@@ -96,6 +96,23 @@ const Ilusiones = () => {
             className="about-perfil-img"
           />
         </div>
+        <br></br>
+        <div className="d-flex flex-column align-items-center">
+          <img
+            src="/blog-computacion-visual/formula8.jpeg"
+            alt="Ambient-light"
+            className="about-perfil-img"
+          />
+        </div>
+        <br></br>
+        <div className="d-flex flex-column align-items-center">
+          <img
+            src="/blog-computacion-visual/formula9.jpeg"
+            alt="Ambient-light"
+            className="about-perfil-img"
+          />
+        </div>
+        <br></br>
       </div>
     </div>
   );
