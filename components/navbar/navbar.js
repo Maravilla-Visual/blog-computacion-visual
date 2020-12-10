@@ -33,6 +33,12 @@ const items = [
       { name: "Reporte", link: "/blog-computacion-visual/projects/shaders/reporte" },
     ],
   },
+  {
+    name: "Fractales de Newton",
+    items: [
+      { name: "Reporte", link: "/blog-computacion-visual/projects/fractales_newton/reporte" },
+    ],
+  },
   { name: "Sobre nosotros", link: "/blog-computacion-visual/about" },
 ];
 
