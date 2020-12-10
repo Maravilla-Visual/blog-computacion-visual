@@ -24,6 +24,14 @@ const Ilusiones = () => {
             <li>Arte: Música (Beethoven, Mozart), Creación de imágenes.</li>
         </lu>
         <br></br>
+        <div className="d-flex flex-column align-items-center">
+          <img
+            src="/blog-computacion-visual/formula7.png"
+            alt="Ambient-light"
+            className="about-perfil-img"
+          />
+        </div>
+        <br></br>
         <h4 className="mb-4">Fractales de newton</h4>
         <p className="ilusion-explanation ml-3">
           {" "}
